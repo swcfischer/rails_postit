@@ -1,8 +1,5 @@
-<%= render 'shared/content_title', title: 'All Posts' %>
-<% @posts.each do |post| %>
-  <div class="row">
-  <%= render 'vote_post', post: post %>
 
+<div class="row">
  <div class="span8 well">
    <% post.categories.each do |category| %>
     <span class="badge"><%= link_to category.name, category_path(category) %></span>
@@ -22,4 +19,3 @@
    </small>
  </div>
 </div>
-<% end %>
